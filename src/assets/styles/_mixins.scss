@@ -1,0 +1,53 @@
+@mixin flex-center() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-around() {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+@mixin select-none() {
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+@mixin fill-canvas() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $canvas-width;
+	height: $canvas-height;
+	padding-top: 100px;
+}
+
+@mixin viga() {
+	font-family: 'Viga-Regular', 'Courier New', Courier, monospace;
+	text-transform: uppercase;
+}
+
+@mixin poetsen-one() {
+	font-family: 'PoetsenOne-Regular', 'Open Sans', Sans, sans-serif;
+	text-transform: uppercase;
+}
+
+@mixin embed_image($url, $width, $height) {
+	width: $width;
+	height: $height;
+	&::before {
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-position: center center;
+		background-image: url($url);
+		background-size: $width $height;
+		display: inline-block;
+		width: $width;
+		height: $height;
+		content: '';
+	}
+}

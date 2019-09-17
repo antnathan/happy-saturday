@@ -1,0 +1,71 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0 auto;
+	line-height: 1.5;
+	position: relative;
+	transition: 0.6s opacity ease-in-out;
+	min-height: 100%;
+	@include flex-center();
+	@include select-none();
+}
+
+h2 {
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+p {
+	text-align: left;
+}
+
+.header {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	@include flex-around();
+}
+
+.content {
+	height: 80%;
+}
+
+.flex {
+	@include flex-center();
+	&.col-flow {
+		flex-direction: column;
+	}
+}
+
+.title {
+	color: $text-color;
+	text-shadow: 0px 4px 0px #000000;
+}
+
+li {
+	margin: 3px;
+	min-width: 40px;
+	&[href] {
+		color: $border-color;
+		border: 3px solid $border-color;
+		background-color: transparent;
+		padding: 10px 15px;
+		cursor: pointer;
+		transition: 0.1s ease-in-out;
+		&:hover {
+			color: $header-color;
+			background-color: $border-color;
+		}
+	}
+}
+
+.page-transition {
+	transition: all 0.1s ease-in-out;
+}
+
+.page-enter {
+	opacity: 0;
+}

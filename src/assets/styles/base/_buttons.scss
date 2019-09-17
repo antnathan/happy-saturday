@@ -1,0 +1,48 @@
+$button-names: (
+	'btn-home': small,
+	'btn-help': small,
+	'btn-close': small,
+	'btn-confirmar': large,
+	'btn-limpar': large,
+	'btn-iniciar': large,
+	'btn-check': small,
+	'btn-sound-on': small,
+	'btn-sound-off': small
+);
+
+$button-width: 56px;
+$button-height: 55px;
+
+$button-large-width: 253px;
+$button-large-height: 100px;
+
+@each $button-name, $size in $button-names {
+	.#{$button-name} {
+		@if $size == small {
+			@include embed_image(
+				'~@/assets/images/buttons/#{$button-name}.png',
+				$button-width,
+				$button-height
+			);
+			max-height: $button-height;
+		}
+		@if $size == large {
+			@include embed_image(
+				'~@/assets/images/buttons/#{$button-name}.png',
+				$button-large-width,
+				$button-large-height
+			);
+			max-height: $button-large-height;
+		}
+		user-select: none;
+		outline: none;
+		padding: none;
+		&:hover,
+		&:focus,
+		&:active {
+			&::before {
+				cursor: pointer;
+			}
+		}
+	}
+}

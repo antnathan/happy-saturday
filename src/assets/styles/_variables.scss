@@ -1,0 +1,69 @@
+/* 
+	Global Variables 
+**/
+
+// colors
+$black: #000000;
+$rich-black: #050405;
+$dark-gray: #212121;
+$dark-liver: #50514f;
+$light-gray: #f0f0f0;
+$white: #ffffff;
+
+$red: #92492d;
+$sunset-orange: #f25f5c;
+$mustard: #ffe066;
+$lapis-lazuli: #247ba0;
+$green-sheen: #70c1b3;
+$blue: #00748c;
+
+// sizes
+$canvas-width: 1200px;
+$canvas-height: 630px;
+$canvas-padding: 10px;
+
+/* 
+	Context Variables
+**/
+$bg-color: $light-gray;
+$text-color: $red;
+$bold-color: $blue;
+
+$header-color: $mustard;
+$border-color: $lapis-lazuli;
+
+$canvas-color: $lapis-lazuli;
+
+$glow-button: $mustard;
+
+
+// Bulma customization
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #8c67ef;
+$primary-invert: findColorInvert($primary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

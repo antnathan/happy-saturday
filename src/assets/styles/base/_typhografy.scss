@@ -1,0 +1,31 @@
+body {
+	@include poetsen-one();
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: $text-color;
+}
+
+input {
+	text-transform: uppercase;
+	&::placeholder {
+		text-transform: uppercase;
+	}
+}
+
+.title {
+	@include poetsen-one();
+}
+
+strong {
+	color: $bold-color !important;
+}
+
+@font-face {
+	font-family: 'Viga-Regular';
+	src: url('../fonts/Viga-Regular.otf');
+}
+
+@font-face {
+	font-family: 'PoetsenOne-Regular';
+	src: url('../fonts/PoetsenOne-Regular.ttf');
+}
