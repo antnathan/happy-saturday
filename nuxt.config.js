@@ -50,6 +50,25 @@ export default {
     '@nuxtjs/pwa'
   ],
 
+  pwa: {
+    icon: {
+      purpose: 'maskable'
+    },
+    meta: {
+      name: 'Happy Saturday',
+      title: 'Happy Saturday',
+      description: 'É um aplicativo para sortear o que comer no sábado!',
+      theme_color: '#8c67ef',
+      lang: 'pt-BR'
+    },
+    manifest: {
+      name: 'Happy Saturday',
+      title: 'Happy Saturday',
+      description: 'É um aplicativo para sortear o que comer no sábado!',
+      lang: 'pt-BR'
+    }
+  },
+
   srcDir: 'src/',
   /*
    ** Build configuration
